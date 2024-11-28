@@ -38,5 +38,9 @@ server.listen = () => {
   });
 };
 
-server.listen();
-console.log(`Server running on VSock CID ${CID}, port ${PORT}`);
+console.log('Sleeping 3s...');
+
+setTimeout(() => {
+  server.listen();
+  console.log(`Server running on VSock CID ${CID}, port ${PORT}`);
+}, 3000);
