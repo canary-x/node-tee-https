@@ -15,4 +15,4 @@ ENV SERVER_PORT=8080 \
 
 EXPOSE 8080
 
-CMD ["node", "index.js"]
+CMD ["/usr/local/bin/node", "index.js"]
