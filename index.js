@@ -17,6 +17,9 @@ const vsockServer = new vsock.VsockServer();
 
 // Pipe VSOCK connections to HTTP server
 vsockServer.on('connection', (socket) => {
+  socket.needDrain = false;
+  socket.writable = true;
+  socket.readable = true;
   httpServer.emit('connection', socket);
 });
 
