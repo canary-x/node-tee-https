@@ -8,4 +8,5 @@ docker/build: ## build docker image
 
 .PHONY: build/enclave
 build/enclave: docker/build ## build nitro enclave, only works on an EC2 instance with the nitro cli
+	rm -f node-tee-https.eif
 	nitro-cli build-enclave --docker-uri com.github.canary-x.node-tee-https:latest --output-file node-tee-https.eif
