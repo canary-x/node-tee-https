@@ -6,11 +6,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-console.log('Sleeping 3s...');
-
-setTimeout(() => {
-  app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-  });
-}, 3000);
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
 

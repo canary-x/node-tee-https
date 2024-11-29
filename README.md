@@ -13,5 +13,5 @@ socat TCP-LISTEN:8080,reuseaddr,fork VSOCK-CONNECT:$VSOCK:8080 &
 
 To terminate the enclave:
 ```shell
-nitro-cli terminate-enclave --enclave-id "$(echo "$enclave_info" | jq -r '.[0].EnclaveID')"
+nitro-cli terminate-enclave --enclave-name node-tee-https
 ```
