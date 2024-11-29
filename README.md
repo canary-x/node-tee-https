@@ -1,3 +1,7 @@
+To build:
+```shell
+make docker/build build/enclave
+```
 To run:
 
 ```shell
